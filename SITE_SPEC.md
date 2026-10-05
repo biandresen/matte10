@@ -6,7 +6,7 @@ Et oversiktlig nettsted for elever på 10. trinn som trenger enkle forklaringer,
 
 ## Struktur og stabile adresser
 
-- `index.html`: forside med lenker til hovedtemaer, `begreper/index.html` og tidligere ressurser.
+- `index.html`: forside med toppfelt og elevillustrasjon. Begreper er alltid første innholdskort rett under toppfeltet, deretter hovedtemaer og tidligere ressurser.
 - `begreper/index.html`: én felles begrepsbank for hele året.
 - `<hovedtema>/index.html`: oversikt over undertemaer.
 - `<hovedtema>/<nummer-slug>/leksjon.html`: forklaring med eksempler.
@@ -38,7 +38,7 @@ Hver oppføring har en stabil ID, navn, gruppe, kort elevvennlig forklaring og e
 
 ## Visuell stil og tilgjengelighet
 
-Mørk blå bakgrunn med diskrete SVG-motiver, lyse lesekort, mørk tekst. Vanlige knapper har lys blå bakgrunn `#dcecfb`, mørk tekst `#173e60` og mørkere hover `#bfdcf4`. Fullskjermknappen bruker turkis. En liten SVG med fem elever vises bare på forsiden.
+Mørk blå bakgrunn med diskrete SVG-motiver, lyse lesekort, mørk tekst. Vanlige knapper har lys blå bakgrunn `#dcecfb`, mørk tekst `#173e60` og mørkere hover `#bfdcf4`. Temaoversikter med frigitte fasiter bruker alltid `class="pill pill-primary"`: mørkere blå `#285a82`, hvit tekst, hover `#1c4669` og en diskret blå glød. Dette gir oversiktsknappen høyere visuell vekt enn den lyse «Forklaring og eksempler»-knappen. Gjenbruk klassen for tilsvarende oversiktsknapper når nye undertemaer frigis. Gløden er statisk, uten pulsering. Fullskjermknappen bruker turkis. En liten SVG med fem elever vises bare på forsiden.
 
 Bruk semantisk HTML, ett h1, logiske h2/h3, `<details>/<summary>`, synlig fokus, norsk dokument-språk og viewport. Ingen animasjon eller flashing som konkurrerer med fagstoffet. Sideinnholdet skal fungere uten eksterne bilder, skrifter eller JavaScript-biblioteker. Skjul navigasjon og dekor ved utskrift. PDF-ark skal fortsatt være oversiktlige A4-ark med plass til utregning.
 
