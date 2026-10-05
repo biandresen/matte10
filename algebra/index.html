@@ -27,7 +27,8 @@ body>main>nav a:focus-visible{outline-color:#90eee0}
 @media(max-width:600px){body{background-size:480px 450px}header{border-radius:16px}}
 }
 
-.focus-bar[hidden]{display:none}
+.focus-bar[hidden],.focus-back[hidden]{display:none}
+.focus-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.focus-back{font:600 15px/1.3 system-ui,sans-serif;padding:10px;min-height:44px}
 .focus-bar{position:sticky;top:0;z-index:20;max-width:920px;margin:0 auto;padding:12px 24px;background:#152338;color:#edf7ff;border-bottom:1px solid #527384;display:flex;align-items:center;justify-content:space-between;gap:16px;font:16px/1.4 system-ui,sans-serif}
 .focus-bar p{margin:0}.focus-bar strong{display:block;font-size:1.05rem}.focus-bar small{color:#c2d4e6}
 button.focus-toggle{display:flex;align-items:center;justify-content:center;gap:10px;background:#93ead8;color:#102f40;border:2px solid #b8ffed;border-radius:12px;padding:13px 20px;min-height:52px;margin:0;font:700 17px/1.3 system-ui,sans-serif;box-shadow:0 3px 16px #62d9c42b;flex-shrink:0}
@@ -35,17 +36,73 @@ button.focus-toggle:not(:disabled):hover{background:#70d7c2;color:#102f40;border
 button.focus-toggle:focus-visible{outline:3px solid white;outline-offset:3px}
 .focus-toggle svg{width:24px;height:24px;max-width:none;margin:0;flex-shrink:0}
 @media screen{html.focus-active body{background-image:none}.focus-active .hero-students{visibility:hidden}.focus-active .focus-bar{padding-top:8px;padding-bottom:8px}}
-@media(max-width:600px){.focus-bar{padding:10px 12px;flex-wrap:wrap;gap:8px}.focus-bar .focus-toggle{width:100%}.focus-active .focus-bar .focus-copy{display:none}}
-@media print{.focus-bar{display:none!important}}
-</style></head><body><div class="focus-bar" hidden><div class="focus-copy"><strong>Gi matte hele skjermen</strong><p><small id="focus-status" role="status" aria-live="polite">Færre forstyrrelser. Ett steg om gangen.</small></p></div><button class="focus-toggle" type="button" aria-pressed="false" aria-describedby="focus-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg><span>Åpne fullskjerm</span></button></div><a class="skip" href="#innhold">Hopp til innhold</a><main id="innhold"><header class=""><div class="hero-copy"><div class="eyebrow">Matematikk · 10. trinn</div><h1>Algebra og algebraiske uttrykk</h1><p>Seks temaer – ta ett steg om gangen</p></div></header><p class="callout">Start med forklaringen til temaet du jobber med. Her finner du også fasiter når de er gjort tilgjengelige.</p><div class="grid"><article class="card"><span class="tag">Tema 1</span><h2>Faktorisering</h2><p>Skriv uttrykket som et gangestykke</p><nav><a class="pill" href="01-faktorisering/leksjon.html">Forklaring og eksempler</a><a class="pill" href="01-faktorisering/index.html">Temaoversikt med fasiter</a></nav></article><article class="card"><span class="tag">Tema 2</span><h2>Forkorting av algebraiske brøker</h2><p>Del oppe og nede på det samme</p><nav><a class="pill" href="02-forkorting-av-algebraiske-broker/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 3</span><h2>Sammensetting av uttrykk med parenteser</h2><p>Løs opp parenteser og samle like ledd</p><nav><a class="pill" href="03-uttrykk-med-parenteser/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 4</span><h2>Sammensetting av brøkuttrykk</h2><p>Finn fellesnevner før du legger sammen</p><nav><a class="pill" href="04-brokuttrykk/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 5</span><h2>Multiplikasjon av polynom</h2><p>Hvert ledd skal møte hvert ledd</p><nav><a class="pill" href="05-multiplikasjon-av-polynom/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 6</span><h2>Kvadratsetningene</h2><p>Tre mønstre du kan kjenne igjen</p><nav><a class="pill" href="06-kvadratsetningene/leksjon.html">Forklaring og eksempler</a></nav></article></div><section><h2>Tidligere prøver</h2><p>Se fasiten fra algebraprøven i uke 38, 2026.</p><a class="pill" href="tidligere-prover/index.html">Åpne tidligere prøver</a></section><footer>Algebra og algebraiske uttrykk · Ta ett steg om gangen. Åpne bare forklaringen du trenger.</footer></main><script>(()=>{
-const root=document.documentElement,bar=document.querySelector('.focus-bar'),button=bar.querySelector('button'),label=button.querySelector('span'),status=document.getElementById('focus-status');
-let fallback=false;
+@media(max-width:600px){.focus-bar{padding:10px 12px;flex-wrap:wrap;gap:8px}.focus-actions{width:100%;flex-wrap:nowrap}.focus-bar .focus-toggle{flex:1;width:auto;min-width:0}.focus-active .focus-bar .focus-copy{display:none}}
+.focus-frame{display:block;width:100%;border:0;flex:1;min-height:0;background:#101827}
+@media screen{body.focus-shell{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}body.focus-shell>:not(.focus-bar):not(.focus-frame){display:none!important}body.focus-shell>.focus-bar{width:100%;flex-shrink:0}html.focus-child .focus-bar{display:none!important}}
+@media print{.focus-bar{display:none!important}body.focus-shell>:not(.focus-frame){display:none!important}.focus-frame{height:100vh}}
+</style></head><body><div class="focus-bar" hidden><div class="focus-copy"><strong>Gi matte hele skjermen</strong><p><small id="focus-status" role="status" aria-live="polite">Færre forstyrrelser. Ett steg om gangen.</small></p></div><div class="focus-actions"><button class="focus-back" type="button" hidden>← Tilbake</button><button class="focus-toggle" type="button" aria-pressed="false" aria-describedby="focus-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg><span>Åpne fullskjerm</span></button></div></div><a class="skip" href="#innhold">Hopp til innhold</a><main id="innhold"><header class=""><div class="hero-copy"><div class="eyebrow">Matematikk · 10. trinn</div><h1>Algebra og algebraiske uttrykk</h1><p>Seks temaer – ta ett steg om gangen</p></div></header><p class="callout">Start med forklaringen til temaet du jobber med. Her finner du også fasiter når de er gjort tilgjengelige.</p><div class="grid"><article class="card"><span class="tag">Tema 1</span><h2>Faktorisering</h2><p>Skriv uttrykket som et gangestykke</p><nav><a class="pill" href="01-faktorisering/leksjon.html">Forklaring og eksempler</a><a class="pill" href="01-faktorisering/index.html">Temaoversikt med fasiter</a></nav></article><article class="card"><span class="tag">Tema 2</span><h2>Forkorting av algebraiske brøker</h2><p>Del oppe og nede på det samme</p><nav><a class="pill" href="02-forkorting-av-algebraiske-broker/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 3</span><h2>Sammensetting av uttrykk med parenteser</h2><p>Løs opp parenteser og samle like ledd</p><nav><a class="pill" href="03-uttrykk-med-parenteser/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 4</span><h2>Sammensetting av brøkuttrykk</h2><p>Finn fellesnevner før du legger sammen</p><nav><a class="pill" href="04-brokuttrykk/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 5</span><h2>Multiplikasjon av polynom</h2><p>Hvert ledd skal møte hvert ledd</p><nav><a class="pill" href="05-multiplikasjon-av-polynom/leksjon.html">Forklaring og eksempler</a></nav></article><article class="card"><span class="tag">Tema 6</span><h2>Kvadratsetningene</h2><p>Tre mønstre du kan kjenne igjen</p><nav><a class="pill" href="06-kvadratsetningene/leksjon.html">Forklaring og eksempler</a></nav></article></div><section><h2>Tidligere prøver</h2><p>Se fasiten fra algebraprøven i uke 38, 2026.</p><a class="pill" href="tidligere-prover/index.html">Åpne tidligere prøver</a></section><footer>Algebra og algebraiske uttrykk · Ta ett steg om gangen. Åpne bare forklaringen du trenger.</footer></main><script>(()=>{
+const root=document.documentElement,bar=document.querySelector('.focus-bar'),button=bar.querySelector('.focus-toggle'),label=button.querySelector('span'),status=document.getElementById('focus-status');
+// Only our own same-origin content frame delegates to the persistent outer page.
+let host=null;
+try{if(window.frameElement?.classList.contains('focus-frame'))host=parent.matteFocus;}catch(e){}
+function localLink(event){
+ if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return null;
+ const a=event.target.closest('a[href]');
+ if(!a||a.hasAttribute('download')||(a.target&&a.target!=='_self'))return null;
+ const url=new URL(a.href,location.href);
+ if(url.origin!==location.origin||!(/\.(?:html|pdf)$|\/$/.test(url.pathname)))return null;
+ return url;
+}
+if(host){
+ root.classList.add('focus-child');root.classList.toggle('focus-active',host.active());
+ document.addEventListener('click',e=>{const url=localLink(e);if(url){e.preventDefault();host.open(url.href);}});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')host.escape();});
+ return;
+}
+let fallback=false,frame=null,shellStarted=false;
+const back=bar.querySelector('.focus-back'),originalTitle=document.title;
+back.addEventListener('click',()=>history.back());
+const originalURL=location.href;
 const supported=()=>!!(document.fullscreenEnabled&&root.requestFullscreen&&document.exitFullscreen);
+const active=()=>!!document.fullscreenElement||fallback;
+function syncFrame(){
+ try{const d=frame?.contentDocument;if(d){d.documentElement.classList.toggle('focus-active',active());frame.title=d.title||'Matematikk – elevressurser';document.title=frame.title;}}catch(e){}
+}
+function show(url){
+ if(url===originalURL){
+  if(frame){frame.remove();frame=null;document.body.classList.remove('focus-shell');document.title=originalTitle;back.hidden=true;}
+  return;
+ }
+ shellStarted=true;back.hidden=false;
+ if(!frame){
+  frame=document.createElement('iframe');frame.className='focus-frame';frame.title='Matematikk – elevressurser';
+  frame.addEventListener('load',syncFrame);
+  document.body.append(frame);document.body.classList.add('focus-shell');
+ }
+ // replace avoids an extra iframe history entry for every top-level pushState.
+ frame.contentWindow.location.replace(url);
+}
+function open(url){
+ const target=new URL(url,location.href);
+ if(target.origin!==location.origin)return;
+ if(target.href===location.href)return;
+ history.pushState({matteFocus:true},'',target.href);
+ show(target.href);
+}
+window.matteFocus={active,open,escape:()=>{if(fallback){fallback=false;render();}}};
+window.addEventListener('popstate',()=>{if(shellStarted)show(location.href);});
+document.addEventListener('click',e=>{
+ if(!active()&&!frame)return;
+ const url=localLink(e);if(!url)return;
+ if(url.pathname===location.pathname&&url.search===location.search&&!frame)return;
+ e.preventDefault();open(url.href);
+});
 function render(){
- const full=!!document.fullscreenElement,active=full||fallback;
- root.classList.toggle('focus-active',active);button.setAttribute('aria-pressed',String(active));
- label.textContent=active?'Avslutt fokusmodus':supported()?'Åpne fullskjerm':'Start fokusvisning';
+ const full=!!document.fullscreenElement,on=active();
+ root.classList.toggle('focus-active',on);button.setAttribute('aria-pressed',String(on));
+ label.textContent=on?'Avslutt fokusmodus':supported()?'Åpne fullskjerm':'Start fokusvisning';
  status.textContent=full?'Fullskjerm er på. Trykk Esc eller knappen for å avslutte.':fallback?'Rolig visning er på. Nettleseren tillater ikke fullskjerm her.':supported()?'Færre forstyrrelser. Ett steg om gangen.':'Fullskjerm støttes ikke her. Prøv en roligere visning uten bakgrunnsdekor.';
+ syncFrame();
 }
 button.addEventListener('click',async()=>{
  button.disabled=true;
@@ -54,11 +111,10 @@ button.addEventListener('click',async()=>{
   else if(fallback)fallback=false;
   else if(supported())await root.requestFullscreen();
   else fallback=true;
- }catch(e){
-  if(!document.fullscreenElement)fallback=true;
- }finally{button.disabled=false;render();}
+ }catch(e){if(!document.fullscreenElement)fallback=true;}
+ finally{button.disabled=false;render();}
 });
 document.addEventListener('fullscreenchange',()=>{fallback=false;render();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&fallback){fallback=false;render();}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')window.matteFocus.escape();});
 bar.hidden=false;render();
 })();</script></body></html>
