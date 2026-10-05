@@ -12,8 +12,13 @@ header .eyebrow{color:#9ae8dc}header .meta{color:#dae5f5}
 section,.card,details{color:#182d39;box-shadow:0 8px 26px #0002}
 .callout{color:#182d39}body>main>p.meta,footer{color:#c1cede}
 footer{border-color:#45526b}
-body>main>nav .pill{background:#202e43;border-color:#61718a;color:#edf5ff}
-body>main>nav .pill:hover{background:#31445e}
+.pill,button,button.secondary,body>main>nav .pill{background:#dcecfb;border:1px solid #86add0;color:#173e60}
+.pill:hover,button:not(:disabled):hover,button.secondary:not(:disabled):hover,body>main>nav .pill:hover{background:#bfdcf4;border-color:#5785af;color:#102f4b}
+summary,details[open]>summary{background:#e4effb;color:#173e60;border-radius:9px}
+summary:hover,details[open]>summary:hover{background:#c9e0f6}
+.home-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px;align-items:center}
+.hero-copy{min-width:0}.hero-students{display:block;width:100%;height:auto}
+@media(max-width:650px){.home-hero{grid-template-columns:1fr;gap:12px}.hero-students{max-width:360px;justify-self:center}}
 body>main>.tag{background:#243f48;color:#b5f3e7;border:1px solid #4c7c80}
 a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #b15a00;outline-offset:4px}
 body>main>nav a:focus-visible{outline-color:#90eee0}
@@ -21,4 +26,4 @@ body>main>nav a:focus-visible{outline-color:#90eee0}
 .area{color:#182d39}
 @media(max-width:600px){body{background-size:480px 450px}header{border-radius:16px}}
 }
-</style></head><body><a class="skip" href="#innhold">Hopp til innhold</a><main id="innhold"><nav><a class="pill" href="../index.html">← Alle temaer</a></nav><header><div class="eyebrow">Matematikk · 10. trinn</div><h1>Faktorisering</h1><p>Forklaring, øving og prøve – samlet på ett sted</p></header><p class="callout">Her finner du forklaringen og oppgavene med løsningsforslag. Prøv en oppgave selv før du åpner svaret.</p><section><h2>1. Forstå</h2><a class="pill" href="leksjon.html">Forklaring og eksempler</a></section><section><h2>2. Øv</h2><a class="pill" href="ovingsoppgaver/oppgaver.pdf">Øvingsoppgaver · PDF</a><a class="pill" href="fasit/oving.html">Øving med fasit</a></section><section><h2>3. Sjekk hva du kan</h2><a class="pill" href="prove/prove.pdf">Prøve · PDF</a><a class="pill" href="fasit/prove.html">Prøve med fasit</a></section><footer>Algebra og algebraiske uttrykk · Ta ett steg om gangen. Åpne bare forklaringen du trenger.</footer></main></body></html>
+</style></head><body><a class="skip" href="#innhold">Hopp til innhold</a><main id="innhold"><nav><a class="pill" href="../index.html">← Alle temaer</a></nav><header class=""><div class="hero-copy"><div class="eyebrow">Matematikk · 10. trinn</div><h1>Faktorisering</h1><p>Forklaring, øving og prøve – samlet på ett sted</p></div></header><p class="callout">Her finner du forklaringen og oppgavene med løsningsforslag. Prøv en oppgave selv før du åpner svaret.</p><section><h2>1. Forstå</h2><a class="pill" href="leksjon.html">Forklaring og eksempler</a></section><section><h2>2. Øv</h2><a class="pill" href="ovingsoppgaver/oppgaver.pdf">Øvingsoppgaver · PDF</a><a class="pill" href="fasit/oving.html">Øving med fasit</a></section><section><h2>3. Sjekk hva du kan</h2><a class="pill" href="prove/prove.pdf">Prøve · PDF</a><a class="pill" href="fasit/prove.html">Prøve med fasit</a></section><footer>Algebra og algebraiske uttrykk · Ta ett steg om gangen. Åpne bare forklaringen du trenger.</footer></main></body></html>

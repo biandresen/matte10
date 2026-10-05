@@ -13,8 +13,13 @@ header .eyebrow{color:#9ae8dc}header .meta{color:#dae5f5}
 section,.card,details{color:#182d39;box-shadow:0 8px 26px #0002}
 .callout{color:#182d39}body>main>p.meta,footer{color:#c1cede}
 footer{border-color:#45526b}
-body>main>nav .pill{background:#202e43;border-color:#61718a;color:#edf5ff}
-body>main>nav .pill:hover{background:#31445e}
+.pill,button,button.secondary,body>main>nav .pill{background:#dcecfb;border:1px solid #86add0;color:#173e60}
+.pill:hover,button:not(:disabled):hover,button.secondary:not(:disabled):hover,body>main>nav .pill:hover{background:#bfdcf4;border-color:#5785af;color:#102f4b}
+summary,details[open]>summary{background:#e4effb;color:#173e60;border-radius:9px}
+summary:hover,details[open]>summary:hover{background:#c9e0f6}
+.home-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px;align-items:center}
+.hero-copy{min-width:0}.hero-students{display:block;width:100%;height:auto}
+@media(max-width:650px){.home-hero{grid-template-columns:1fr;gap:12px}.hero-students{max-width:360px;justify-self:center}}
 body>main>.tag{background:#243f48;color:#b5f3e7;border:1px solid #4c7c80}
 a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #b15a00;outline-offset:4px}
 body>main>nav a:focus-visible{outline-color:#90eee0}
