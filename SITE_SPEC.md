@@ -57,3 +57,7 @@ Hvis disse kildene er tilgjengelige: endre dem, bygg og kontroller resultatet. H
 - Søket i Begreper virker med treff, null treff og tømming; direkte begrepslenker åpner riktig oppføring.
 - Lærerstoff er fraværende også i HTML-kilden. Dokumentasjonen skal ikke lenkes fra elevsidene.
 - Kontroller ferdig GitHub Pages-bygg og sidene på nett før endringen beskrives som publisert.
+
+## Timeform fra 14.10.2026
+
+Ordinære timer bruker 20 minutter teori, 5 minutter pause, 30 minutter øving og 5 minutter oppsummering. Til hvert tema skal det lages test i PDF og test med oppgaver, svar og framgangsmåte. Testene er separate ressurser ved behov; de er ikke obligatoriske tidsblokker i hver time. Nye tester og fasiter frigis fortsatt bare etter uttrykkelig instruksjon. Større prøveøkter har egen tidsramme.
