@@ -61,3 +61,7 @@ Hvis disse kildene er tilgjengelige: endre dem, bygg og kontroller resultatet. H
 ## Timeform fra 14.10.2026
 
 Ordinære timer bruker 20 minutter teori, 5 minutter pause, 30 minutter øving og 5 minutter oppsummering. Til hvert tema skal det lages test i PDF og test med oppgaver, svar og framgangsmåte. Testene er separate ressurser ved behov; de er ikke obligatoriske tidsblokker i hver time. Nye tester og fasiter frigis fortsatt bare etter uttrykkelig instruksjon. Større prøveøkter har egen tidsramme.
+
+## Tema 6 – Oppsummering
+
+Tema 6 er `algebra/06-oppsummering/index.html`. Her ligger to blandede øvingssett fra tema 1–5, med `sett-1/` og `sett-2/`, hver med `oppgaver.pdf`, `fasit.pdf` og `fasit.html`. HTML-fasitene har oppgaver, svar og åpnefelt med forklaringer. Kilden er `oppsummering.py`, med oppgaveinnhold fra de to blandede øvingssettene. Tidligere tema 6 om kvadratsetningene er fjernet etter lærerens instruksjon og skal ikke gjenpubliseres. Tidligere prøvearkiv bevares.
