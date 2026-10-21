@@ -65,3 +65,13 @@ Ordinære timer bruker 20 minutter teori, 5 minutter pause, 30 minutter øving o
 ## Tema 6 – Oppsummering
 
 Tema 6 er `algebra/06-oppsummering/index.html`. Her ligger to blandede øvingssett fra tema 1–5, med `sett-1/` og `sett-2/`, hver med `oppgaver.pdf`, `fasit.pdf` og `fasit.html`. HTML-fasitene har oppgaver, svar og åpnefelt med forklaringer. Kilden er `oppsummering.py`, med oppgaveinnhold fra de to blandede øvingssettene. Tidligere tema 6 om kvadratsetningene er fjernet etter lærerens instruksjon og skal ikke gjenpubliseres. Tidligere prøvearkiv bevares.
+
+## Øving til terminprøve
+
+Hovedtemaet ligger på `terminprove/index.html` og har 13 nummererte økter. Kilder ligger i `verktøy/terminprove/innhold.py` og `bygg.py` i arbeidsmiljøet. Den felles elevgeneratoren bygger også dette temaet, slik at det beholdes ved senere bygg.
+
+Hver økt har oversikt, `leksjon.html`, `oppgaver.html`, øvings-PDF, forklart HTML-fasit, samt separat egenkontroll i PDF og med HTML-fasit. Fasitene er frigitt etter lærerens bestilling om å publisere hele øvingsopplegget. Dette er nye øvingsoppgaver; kommende terminprøve og lærerens planleggingsdokumenter inngår ikke.
+
+Timeformen for dette hovedtemaet er 20 minutter felles forklaring, 5 minutter pause, 20 minutter elevoppgaver, 10 minutter gjennomgang med forklaring og 5 minutter oppsummering. Oppgave 1–4 er grunnoppgaver og 5–6 ekstra. Egenkontrollen brukes separat ved behov. Denne timeformen gjelder terminøvingen; algebraressursene beholder sin tidligere struktur.
+
+Alle øktsider bruker felles navigasjon, begrepsbank og fullskjerm. Figurer er lokale SVG-er; de samme vektordataene brukes til PDF. Ingen eksterne biblioteker kreves i elevens nettleser.
