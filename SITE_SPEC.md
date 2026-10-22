@@ -72,6 +72,6 @@ Hovedtemaet ligger på `terminprove/index.html` og har 13 nummererte økter. Kil
 
 Hver økt har oversikt, `leksjon.html`, `oppgaver.html`, øvings-PDF, forklart HTML-fasit, samt separat egenkontroll i PDF og med HTML-fasit. Fasitene er frigitt etter lærerens bestilling om å publisere hele øvingsopplegget. Dette er nye øvingsoppgaver; kommende terminprøve og lærerens planleggingsdokumenter inngår ikke.
 
-Timeformen for dette hovedtemaet er 20 minutter felles forklaring, 5 minutter pause, 20 minutter elevoppgaver, 10 minutter gjennomgang med forklaring og 5 minutter oppsummering. Oppgave 1–4 er grunnoppgaver og 5–6 ekstra. Egenkontrollen brukes separat ved behov. Denne timeformen gjelder terminøvingen; algebraressursene beholder sin tidligere struktur.
+Timeformen for dette hovedtemaet er 20 minutter felles forklaring, 5 minutter pause, 20 minutter elevoppgaver, 10 minutter gjennomgang med forklaring og 5 minutter oppsummering. Vanligvis er oppgave 1–4 grunnoppgaver og 5–6 ekstra. Likningsøkten er utvidet med enkle andregradslikninger, 10 eksempler og 20 øvingsoppgaver; prioriter oppgave 3 og 7–9 i økten. Øvrige oppgaver og den utvidede egenkontrollen er til støtte og senere repetisjon. Egenkontrollen brukes separat ved behov. Denne timeformen gjelder terminøvingen; algebraressursene beholder sin tidligere struktur.
 
 Alle øktsider bruker felles navigasjon, begrepsbank og fullskjerm. Figurer er lokale SVG-er; de samme vektordataene brukes til PDF. Ingen eksterne biblioteker kreves i elevens nettleser.
